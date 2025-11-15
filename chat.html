@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ИИ Сонник — Чат</title>
+
+  <link rel="stylesheet" href="css/chat.css">
+</head>
+<body>
+
+<header class="app-header">
+  <div class="header-left">
+    <div class="logo-box">
+      <img src="icon/icon.png" alt="ИИ Сонник" class="logo-img">
+    </div>
+      <div class="app-title">ИИ Сонник </div>
+      <div class="app-subtitle">Психологическая интерпретация снов</div>
+    </div>
+  </div>
+
+  <div class="header-right">
+    <button class="btn-secondary btn-small" id="logoutBtn">Выйти</button>
+  </div>
+</header>
+
+
+<!-- ======================== -->
+<!--        ОСНОВНАЯ СЕТКА     -->
+<!-- ======================== -->
+<main class="chat-page messenger-layout">
+
+  <!-- ░░░ САЙДБАР c ЧАТАМИ ░░░ -->
+  <aside class="chat-sidebar">
+
+    <div class="chat-sidebar-header">
+      <div class="chat-sidebar-title">Чаты</div>
+      <button id="newChatBtn" class="chat-icon-btn">+</button>
+    </div>
+
+    <div class="chat-search">
+      <input id="chatSearch" type="text" placeholder="Поиск по снам">
+    </div>
+
+    <div class="chat-list" id="chatList"></div>
+
+    <div class="empty-chat-note" id="emptyChatNote">
+      Пока здесь нет чатов
+    </div>
+
+  </aside>
+
+
+  <!-- ░░░ ОСНОВНАЯ ПАНЕЛЬ: ЧАТ ░░░ -->
+  <section class="chat-main">
+
+    <div class="chat-main-placeholder" id="chatPlaceholder">
+      <div class="chat-placeholder-icon">💬</div>
+      <div class="chat-placeholder-title">Выберите чат</div>
+      <div class="chat-placeholder-text">
+        или создайте новый, чтобы начать делиться снами.
+      </div>
+    </div>
+
+<div class="chat-main-header" id="chatHeader" style="display:none;">
+  <div>
+    <div class="chat-main-title" id="chatTitle">Чат</div>
+    <div class="chat-main-subtitle" id="chatSubtitle">Диалог</div>
+  </div>
+
+  <button id="deleteChatBtn" class="chat-delete-btn">🗑</button>
+</div>
+
+    <div class="chat-box" id="chatBox"></div>
+
+    <div class="chat-input-block chat-input-row">
+      <textarea id="chatInput" placeholder="Опишите свой сон..."></textarea>
+      <button id="micBtn">🎤</button>
+      <button id="sendMessageBtn" class="btn-hero-primary send-btn">Отправить</button>
+    </div>
+
+  </section>
+
+</main>
+
+<div id="paymentModal" class="modal" style="display:none;">
+  <div class="modal-content pay">
+    <span id="payClose" class="close-btn">&times;</span>
+
+    <h2>Лимит израсходован</h2>
+    <p>Вы использовали все 5 бесплатных сообщений.</p>
+    <p>Чтобы продолжить — оформите подписку.</p>
+
+    <button id="payButton" class="btn-hero-primary" style="width:100%;margin-top:10px;">
+      Купить подписку
+    </button>
+  </div>
+</div>
+
+<script src="chat.js"></script>
+</body>
+</html>
