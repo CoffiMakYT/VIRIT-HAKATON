@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>ИИ Сонник — Чат</title>
+  <link rel="stylesheet" href="css/chat.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+
+  <!-- ВЕРХНЯЯ ПАНЕЛЬ -->
+  <header class="app-header">
+    <div class="header-left">
+      <div class="logo-box">
+        <img src="icon/icon.png" alt="logo" class="logo-img">
+      </div>
+
+      <div class="logo-text">
+        <div class="logo-title">ИИ Сонник</div>
+        <div class="logo-subtitle">Расшифровка ваших снов</div>
+      </div>
+    </div>
+
+    <div class="header-right">
+      <div id="quotaIndicator" class="quota-indicator"></div>
+
+      <button id="logoutBtn" class="btn-secondary btn-small">Выйти</button>
+    </div>
+  </header>
+
+  <!-- ОСНОВНОЙ ЧАТ -->
+  <main class="layout full">
+    <div class="chat-main">
+      <div class="chat-inner">
+
+        <!-- Заголовок -->
+        <div class="chat-header">
+          <div class="chat-title">Ваш сон</div>
+          <div class="chat-subtitle">Индивидуальная трактовка с ИИ</div>
+        </div>
+
+        <!-- История сообщений -->
+        <div id="chatBox" class="chat-body"></div>
+
+        <!-- Поле ввода -->
+        <div class="chat-input-row">
+
+          <!-- КНОПКА МУСОРКИ -->
+          <button id="trashBtn" class="trash-btn">🗑</button>
+
+          <!-- КНОПКА МИКРОФОНА (ASR) -->
+          <button id="voiceBtn" class="voice-btn">🎤</button>
+
+          <!-- ТЕКСТОВОЕ ПОЛЕ -->
+          <textarea
+            id="chatInput"
+            placeholder="Опишите ваш сон…"
+            rows="1"
+          ></textarea>
+
+          <!-- КНОПКА ОТПРАВКИ -->
+          <button id="sendMessageBtn" class="btn-primary">Отправить</button>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- МОДАЛКА ОПЛАТЫ -->
+  <div id="paymentModal" class="modal-backdrop">
+    <div class="modal">
+      <button id="payClose" class="modal-close">✖</button>
+      <h2>Нужна подписка</h2>
+      <p>Вы исчерпали бесплатные сообщения. Для продолжения оформите подписку.</p>
+      <button id="payButton" class="btn-hero-primary">Купить подписку</button>
+    </div>
+  </div>
+
+  <script src="chat.js"></script>
+</body>
+</html>
